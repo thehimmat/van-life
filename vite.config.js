@@ -9,7 +9,12 @@ export default defineConfig({
 		rollupOptions: {
 			external: [
 				'firebase/app',
-				'firebase/firestore/lite'
+				'firebase/firestore/lite',
+				'firebase/firestore',
+				'firebase/auth',
+				'firebase/storage',
+				'firebase/database',
+				/^firebase\/.*/  // This will catch all firebase imports
 			],
 		},
 	},
